@@ -20,5 +20,17 @@
         Flavored syrup can be added.
     </string>
 
+    <string name="cappuccino_title">CAPPUCCINO</string>
+    <string name="cappuccino_desc">
+        Espresso with hot milk and steamed milk foam.
+    </string>
+
+    <string name="mocha_title">MOCHA</string>
+    <string name="mocha_desc">
+        Espresso with chocolate syrup, steamed milk, and whipped cream.
+    </string>
+
+
     <string name="coffee_list">Coffee List</string>
+    <string name="back_to_list">Back to List</string>
 </resources>

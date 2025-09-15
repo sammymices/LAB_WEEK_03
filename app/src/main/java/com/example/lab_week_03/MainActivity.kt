@@ -10,8 +10,7 @@ interface CoffeeListener {
     fun onSelected(id: Int)
 }
 
-class MainActivity : AppCompatActivity(), CoffeeListener {
-
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,20 +21,7 @@ class MainActivity : AppCompatActivity(), CoffeeListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .add(R.id.fragment_container, ListFragment())
-                .commit()
-        }
-    }
-
-    override fun onSelected(id: Int) {
-        val detailFragment = DetailFragment.newInstance(id)
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, detailFragment)
-            .addToBackStack(null)
-            .commit()
     }
 }
+
 

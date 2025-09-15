@@ -21,11 +21,11 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         coffeeTitle = view.findViewById(R.id.coffee_title)
         coffeeDesc = view.findViewById(R.id.coffee_desc)
 
-        // ambil argument dari newInstance()
-        val coffeeId = arguments?.getInt(COFFEE_ID, 0) ?: 0
+        val coffeeId = arguments?.getInt(ListFragment.COFFEE_ID, 0) ?: 0
         setCoffeeData(coffeeId)
     }
 
@@ -45,15 +45,6 @@ class DetailFragment : Fragment() {
             }
         }
     }
-
-    companion object {
-        private const val COFFEE_ID = "COFFEE_ID"
-
-        fun newInstance(coffeeId: Int) = DetailFragment().apply {
-            arguments = Bundle().apply {
-                putInt(COFFEE_ID, coffeeId)
-            }
-        }
-    }
 }
+
 
